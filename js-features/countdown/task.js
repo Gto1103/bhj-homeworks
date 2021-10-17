@@ -10,4 +10,5 @@ function removeTime() {
 	timer.textContent = time;
 }
 
-setInterval(removeTime, 1000);
+setTimeout(setInterval(removeTime, 1000), 59000);
+clearTimeout();

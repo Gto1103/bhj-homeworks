@@ -9,4 +9,3 @@ cookie.onclick = function () {
 	setTimeout((() => cookie.width = 200), 100);
 	cookie.width = 300;
 }
-
