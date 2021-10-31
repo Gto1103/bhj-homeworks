@@ -21,7 +21,8 @@ class Game {
 		let currentSymbolColl = document.getElementsByClassName("symbol_current");
 		console.log(currentSymbolColl);
 		let currentSymbol = "";
-		for (let current of currentSymbolColl) {
+		let currentSymbolArr = [...currentSymbolColl];
+		for (let current of currentSymbolArr) {
 			currentSymbol = current.textContent;
 		}
 
@@ -35,11 +36,11 @@ class Game {
 
 			if (currentSymbol === keyboardSymbol) {
 				console.log('YES');
-				this.success();
+				this.success;
 
 			} else {
 				console.log("NOT");
-				this.fail();
+				this.fail;
 			}
 		};
 
