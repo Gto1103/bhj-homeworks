@@ -36,11 +36,11 @@ class Game {
 
 			if (currentSymbol === keyboardSymbol) {
 				console.log('YES');
-				this.success;
+				() => { this.success() };
 
 			} else {
 				console.log("NOT");
-				this.fail;
+				() => { this.fail() };
 			}
 		};
 
