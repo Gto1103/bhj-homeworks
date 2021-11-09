@@ -18,34 +18,15 @@ class Game {
 
 	registerEvents() {
 
-		let currentSymbolColl = document.getElementsByClassName("symbol_current");
-		console.log(currentSymbolColl);
-		let currentSymbol = "";
-		let currentSymbolArr = [...currentSymbolColl];
-		for (let current of currentSymbolArr) {
-			currentSymbol = current.textContent;
-		}
-
-		console.log(this.currentSymbol);
-		console.log(currentSymbol);
-
-		function keyUp(event) {
-			let keyboardSymbol = "";
-			keyboardSymbol = event.key.toLowerCase();
-			console.log(keyboardSymbol);
-
-			if (currentSymbol === keyboardSymbol) {
-				console.log('YES');
-				() => { this.success() };
-
+		const keyUp = (event) => {
+			if (this.currentSymbol.textContent === event.key.toLowerCase()) {
+				this.success();
 			} else {
-				console.log("NOT");
-				() => { this.fail() };
+				this.fail();
 			}
 		};
 
 		document.addEventListener('keyup', keyUp);
-
 
 		/*
 		  TODO:
@@ -117,4 +98,3 @@ class Game {
 }
 
 new Game(document.getElementById('game'))
-
