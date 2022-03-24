@@ -1,8 +1,6 @@
 const taskForm = document.getElementById('tasks__form');
 
-taskForm.addEventListener('submit', addNewTask);
-
-function addNewTask() {
+taskForm.addEventListener('submit', function (event) {
 	event.preventDefault();
 
 	let taskInput = document.getElementById('task__input');
@@ -24,4 +22,4 @@ function addNewTask() {
 		}
 	}
 	taskInput.value = '';
-}
+});
